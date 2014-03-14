@@ -1,4 +1,15 @@
 class DiscountCalculator(object):
     
     def calculate(self, total, discount_amount, discount_type):
-        return 20.0
+        if discount_type == 'percent':
+            percentage_discount = float(discount_amount) / 100
+            discount = float(total) * percentage_discount   
+        else:
+            discount_type == 'dollar'
+            discount = discount_amount           
+            
+        return discount
+        
+    
+        
+    

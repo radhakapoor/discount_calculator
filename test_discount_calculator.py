@@ -1,10 +1,23 @@
 import unittest
 from discount_calculator import DiscountCalculator
 
+
 class DiscountCalculatorTests(unittest.TestCase):
-    def test_twenty_percent_discount(self):
+    
+    def test_ten_percent_discount(self):
         discount_calculator = DiscountCalculator()
-        result = discount_calculator.calculate(100, 20, 'percent')
-        self.assertEqual(20.0, result)
+        result = discount_calculator.calculate(100, 10, 'percent')
+        self.assertEqual(10.0, result)
+        
+    
+    def test_fifteen_percent_discount(self):
+        discount_calculator = DiscountCalculator()
+        result = discount_calculator.calculate(100, 15, 'percent')
+        self.assertEqual(15.0, result)
+        
+    def test_five_dollar_discount(self):
+        discount_calculator = DiscountCalculator()
+        result = discount_calculator.calculate(250, 5, 'dollar')
+        self.assertEqual(5.0, result)
         
         
