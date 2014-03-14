@@ -18,6 +18,6 @@ class DiscountCalculatorTests(unittest.TestCase):
     def test_five_dollar_discount(self):
         discount_calculator = DiscountCalculator()
         result = discount_calculator.calculate(250, 5, 'dollar')
-        self.assertEqual(5.0, result)
+        self.assertEqual(5, result)
         
         
